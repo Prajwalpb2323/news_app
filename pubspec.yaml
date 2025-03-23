@@ -1,0 +1,33 @@
+name: news_app
+description: "A news app that fetches and displays articles from NewsAPI."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Added dependencies for the news app
+  provider: ^6.1.1           # For state management
+  http: ^1.1.2               # For API calls
+  cached_network_image: ^3.3.0  # For image caching
+  flutter_dotenv: ^5.1.0     # For environment variables
+  intl: ^0.18.1              # For date formatting
+  url_launcher: ^6.2.1       # For opening URLs (optional but useful)
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Add assets section for .env file
+  assets:
+    - .env
